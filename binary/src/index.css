@@ -1,3 +1,4 @@
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root {
     --color-primary: #6741d9;
     --color-primary-light: #7950f2;
@@ -14,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Outfit", 'sans-serif' !important;
   }
   
   html {
@@ -370,4 +372,175 @@
     opacity: 1;
     max-height: 100px; /* Adjust based on content */
   }
-  
+
+.landing-body{
+  background-color: #f6f6f6;
+}
+.landing-Navbar{
+  width: 100%;
+  display: flex; 
+  justify-content: space-around;
+  margin: 2rem;
+  height: 10%;
+}
+.landing-Navbar-head{
+  font-weight: bolder;
+  color: rgb(237, 154, 0);
+  font-size: 2rem;
+}
+.landing-Navbar-options{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+
+}
+.landing-Navbar-option{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.landing-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
+}
+.landing-main-text{
+  margin: 3rem;
+  padding: 1.5rem;
+}
+.landing-main-text h1{
+  font-size: 3rem;
+  color: #1A1C20;
+  text-align: center;
+}
+.landing-main-text p{
+  color: #1b1f29;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.landing-main-buttons1{
+  justify-content: space-between;
+  background-color:#f0a500;
+  border: none;
+  margin:2rem;
+  padding:1rem;
+  border-radius: 30px;
+  color: #f6f6f6;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+.landing-main-buttons2{
+  justify-content: space-between;
+  background-color:#f0a500;
+  border: none;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 30px;
+  color: #f6f6f6;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+.landing-main-buttons1:hover{
+  background-color:#985702;
+}
+.landing-main-buttons2:hover{
+  background-color:#985702 ;
+}
+.landing-card-area {
+  display: flex;
+  justify-content: center;   /* Center the cards horizontally */
+  align-items: center;       /* Center vertically (if needed in future) */
+  flex-wrap: wrap;           /* Allow cards to wrap onto a new line on smaller screens */
+  gap: 20px;                 /* Add space between cards */
+  padding: 20px;
+  width: 100%;   
+  flex-wrap: nowrap;       /* Prevent wrapping to a new line */            /* Add space between the cards */
+  overflow-x: auto;             /* Ensure the container takes full width */
+}
+
+.landing-wrapper {
+  background-color: #1e1f21;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.landing-box-area {
+  display: flex;
+  justify-content: center;    /* Ensure the card content is centered */
+  align-items: center;
+}
+
+.landing-box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  min-width: 250px;            /* Set a minimum width for responsiveness */
+  max-width: 350px;            /* Set a maximum width to control card size */
+  width: 100%;                 /* Allow the card to take full width of its parent */
+  transition: transform 0.5s;
+}
+
+.landing-box img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.landing-overlay {
+  height: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 14px;
+  transition: height 0.5s ease-in-out;
+}
+
+.landing-overlay h2 {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.landing-overlay p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.landing-box:hover img {
+  transform: scale(1.2);
+}
+
+.landing-box:hover .landing-overlay {
+  height: 100%;
+}
+
+/* Make cards responsive by adjusting their width on smaller screens */
+@media (max-width: 768px) {
+  .landing-box {
+    min-width: 200px;         /* Reduce the minimum width on smaller screens */
+    max-width: 300px;
+  }
+}
+
+/* Optional: Hide horizontal scrollbar for cleaner look */
+.landing-card-area::-webkit-scrollbar {
+  display: none;
+}
+
+
