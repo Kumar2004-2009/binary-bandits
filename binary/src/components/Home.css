@@ -1,0 +1,28 @@
+/* Home.css */
+.home-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #91ddcf;
+    color: black;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #83b4ff;
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .edit{
+    color: black;
+  }
+  

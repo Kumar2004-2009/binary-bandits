@@ -1,76 +1,50 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+// Login.jsx
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
-const Login = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+const Login = ({ setLoggedInUser }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/login', {
+        email,
+        password,
+      });
+      setLoggedInUser(response.data.user); // Set the logged-in user
+      navigate('/home');
+    } catch (error) {
+      setMessage(error.response?.data.message || 'Login failed');
+    }
+  };
+
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="bg-white p-3 rounded w-25">
-        <h2>Login</h2>
-        <form>
-          <div className="mb-3">
-            <label htmlFor="email">
-              <strong>Email</strong>
-            </label>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              autoComplete="off"
-              name="email"
-              className="form-control rounded-0"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-
-          <div className="mb-3">
-            <label htmlFor="email">
-              <strong>Password</strong>
-            </label>
-            <input
-              type="password"
-              placeholder="Enter Password"
-              name="password"
-              className="form-control rounded-0"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          <button type="submit" className="btn btn-success w-100 rounded-0">
-            Login
-          </button>
-        </form>
-        <div
-          className="d-flex align-items-center my-4"
-          style={{ textAlign: "center" }}
-        >
-          <div
-            style={{
-              flex: 1,
-              borderBottom: "1px dashed #000",
-              marginRight: "0.25em",
-            }}
-          ></div>
-          <span style={{ padding: "0 10px", backgroundColor: "#FDF2C0" }}>
-            OR
-          </span>
-          <div
-            style={{
-              flex: 1,
-              borderBottom: "1px dashed #000",
-              marginLeft: "0.25em",
-            }}
-          ></div>
-        </div>
-        <p>Create a new Account</p>
-        <Link
-          to="/register"
-          className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none"
-        >
-          Register
-        </Link>
-      </div>
+    <div className="login-container">
+      <h1>Login</h1>
+      <form onSubmit={handleLogin} className="login-form">
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+      {message && <p>{message}</p>}
     </div>
   );
 };

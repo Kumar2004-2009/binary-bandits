@@ -1,0 +1,33 @@
+/* MainCommunity.css */
+.title{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: black;
+}
+.main-container {
+    padding: 2rem;
+    display: flex;
+    height: 80vh;
+    background-color: #F5F5F5; /* Light grey background */
+    font-family: 'Arial', sans-serif;
+    color: black;
+  }
+  
+  .form-section {
+    flex: 1;
+    padding: 30px;
+    background-color: #FFFFFF; /* White background */
+    border-right: 1px solid #E0E0E0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px; /* Subtle shadow */
+  }
+  
+  .posts-section {
+    flex: 2;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    overflow-y: auto;
+  }
+  

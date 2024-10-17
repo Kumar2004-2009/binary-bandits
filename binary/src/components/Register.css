@@ -1,0 +1,23 @@
+/* Register.css */
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #91ddcf;
+    text-align: center;
+  }
+  
+  .register-form input,
+  .register-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+  }
+  
+  .club-selection {
+    text-align: left;
+  }
+  

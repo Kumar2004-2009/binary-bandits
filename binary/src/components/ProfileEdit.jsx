@@ -2,14 +2,14 @@
 import React, { useState } from 'react';
 import './ProfileEdit.css'; // Ensure this file is linked correctly
 
-const ProfileEdit = () => {
+const ProfileEdit = ({ loggedInUser }) => {
   const [profile, setProfile] = useState({
-    username: 'John Doe',
-    email: 'john.doe@example.com',
+    username: `${loggedInUser.username}`,
+    email: `${loggedInUser.email}`,
     description: 'Software Developer',
     website: 'www.example.com',
-    avatar: 'https://via.placeholder.com/150', // Placeholder for avatar
-    coverImage: 'https://via.placeholder.com/800x200', // Placeholder for cover image
+    avatar: 'https://cdn-icons-png.flaticon.com/512/6858/6858504.png', // Placeholder for avatar
+    coverImage: 'https://lh3.googleusercontent.com/proxy/Lj4cpDss_Mt-hb5IpW2Y3V8yb_Yiwof-LlvRwF5TvLStXlYjP-A8ifMoMwl-1yO2zQmrCeWsvZzumVpYQPIIB28skOKMC7bpZYt_bBB3-cU4SAS63VgnmcUdjLsfRp5qQB9I1Q', // Placeholder for cover image
   });
 
   const [isModalOpen, setModalOpen] = useState(false);
