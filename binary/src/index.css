@@ -58,6 +58,7 @@
     border-radius: 0.9rem;
     /* overflow: scroll; */
     position: relative;
+    margin-bottom: 10px;
   }
   
   .loader {

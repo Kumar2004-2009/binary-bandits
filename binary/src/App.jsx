@@ -10,6 +10,7 @@ import Home from './components/Home'
 import ProfileEdit from './components/ProfileEdit'
 import LandingPage from './components/LandingPage'
 import Navbar from './Navbar';
+import Footer from './Footer';
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(null);
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/community" element={<MainCommunity/>} />
         <Route path="/edit" element={<ProfileEdit loggedInUser={loggedInUser}/>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }
