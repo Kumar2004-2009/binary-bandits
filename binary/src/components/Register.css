@@ -1,23 +1,75 @@
-/* Register.css */
-.register-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #91ddcf;
-    text-align: center;
-  }
-  
-  .register-form input,
-  .register-form button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f4f4f4;
-  }
-  
-  .club-selection {
-    text-align: left;
-  }
-  
+.loginContainer {
+  margin: 12rem;
+  text-align: left;
+  display: inline-block;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 320px;
+}
+
+.formHeading {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.formHeadingP {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.formHeadingP a {
+  color: #007c89;
+  text-decoration: none;
+}
+
+.formLabel {
+  display: inline;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.formNextHead {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.formInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.formCheckboxClib{
+  display: flex;
+  align-items: center;
+}
+.formCheckbox {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.formCheckboxInput {
+  cursor: pointer;
+}
+
+.formButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #007c89;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.formButton:hover {
+  background-color: #005f66;
+}
+.error {
+  color: red;
+  padding: 5px;
+}

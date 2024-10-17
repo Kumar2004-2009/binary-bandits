@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../index.css";
+// import "./index.css";
+import "../index.css"
 import { MovieDetails } from "./MovieDetails";
 
 const tempMovieData = [
@@ -43,7 +44,7 @@ const tempMovieData = [
 
 const tempWatchedData = [
   {
-    imdbID: "tt1375666",
+    imdbID: "tt137566",
     Title: "Marketer Of The Year",
     Date: "19/10/2024",
     Poster:
@@ -71,6 +72,7 @@ export default function EventManager() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
   const [selectedId, setSelectedId] = useState(null);
+  const [error,setError]=useState("");
 
   function handleSelectMovie(id) {
     setSelectedId((selectedId) => (id === selectedId ? null : id));
@@ -79,7 +81,13 @@ export default function EventManager() {
     setSelectedId(null);
   }
   function handleAddWatched(movie) {
-    setWatched([...watched, movie]);
+    const alreadyWatched=watched.some((watchedMovie)=>watchedMovie.imdbID===movie.imdbID);
+    if(alreadyWatched){
+      setError("Event is already Registered")
+    }else{
+      setWatched([...watched, movie]);
+      setError("");
+    }
   }
   return (
     <>
@@ -99,6 +107,9 @@ export default function EventManager() {
           ) : (
             <>
               <WatchedMovieList watched={watched} />
+              {error && (
+                <p className="error-message">{error}</p>
+              )}
             </>
           )}
         </Box>

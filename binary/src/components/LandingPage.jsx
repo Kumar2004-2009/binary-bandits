@@ -34,21 +34,6 @@ function LandingPage() {
 }
 
 export default LandingPage;
-
-function Navbar() {
-  return (
-    <div className="landing-Navbar">
-      <div className="landing-Navbar-head">UniSync</div>
-      <div className="landing-Navbar-options">
-        <div className="landing-Navbar-option"><Link to="/register">Home</Link></div>
-        <div className="landing-Navbar-option">About</div>
-        <div className="landing-Navbar-option">Testimonial</div>
-        <div className="landing-Navbar-option">Contact</div>
-      </div>
-    </div>
-  );
-}
-
 function Main() {
   return (
     <div className="landing-main">

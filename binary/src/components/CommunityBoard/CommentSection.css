@@ -1,20 +1,28 @@
 /* CommentSection.css */
 .comment-section {
-    margin: 10px 0;
-  }
-  .comment-section input {
-    margin-right: 10px;
-    padding: 10px;
-    margin: 10px;
-  }
-  .comments {
-    margin-top: 10px;
-  }
-  .comment-section button{
-    color: #5a72a0;
-  }
-  .rezonanz{
-    height: 40px;
-    width: 60px;
-  }
-  
+  margin: 10px 0;
+}
+.comment-section input {
+  margin-right: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+.comments {
+  display: flex;
+  margin-top: 10px;
+}
+.formInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.comment-button {
+  background-color: #005f66;
+}
+.rezonanz {
+  height: 40px;
+  width: 60px;
+}

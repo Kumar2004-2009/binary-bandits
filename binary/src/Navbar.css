@@ -31,3 +31,19 @@
     color: #003366 !important;
     border-bottom: 2px solid #003366;
 }
+.navbar-head{
+    display: flex;
+}
+.navbar-container{
+    width: 60%;
+}
+.navbar-para{
+    display: inline-block;
+    font-size: 3rem;
+}
+.navbar-image{
+    display: inline-block;
+    height: auto;
+    width: 50%;
+    text-align: center;
+}

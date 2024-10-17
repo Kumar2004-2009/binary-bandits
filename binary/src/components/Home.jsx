@@ -31,20 +31,7 @@ const posts = [
     image: "/dummy.png",
     url: "https://www.linkedin.com/posts/parth-kamal-025422293_fetchai-ideathon-innovation-activity-7252254373915840513-3TI9",
   },
-  {
-    name: "Smantha",
-    description:
-      "Ideathon Experience with Fetch.AI 🌟I had an incredible experience participating in the Fetch.AI Ideathon! It was an exciting journey filled with brainstorming, collaboration, and innovative thinking. 💡The opportunity to work on real-world challenges alongside talented individuals was both inspiring and rewarding. A huge thank you to the Dev Chauhan Fetch.ai Developers: Meerut team for organizing this event and providing us with the platform to innovate and ideate on future technologies. 🚀Excited to carry forward the learnings from this experience into future projects!.",
-    image: "/dummy.png",
-    url: "https://www.linkedin.com/posts/parth-kamal-025422293_fetchai-ideathon-innovation-activity-7252254373915840513-3TI9",
-  },
-  {
-    name: "Smantha",
-    description:
-      "Ideathon Experience with Fetch.AI 🌟I had an incredible experience participating in the Fetch.AI Ideathon! It was an exciting journey filled with brainstorming, collaboration, and innovative thinking. 💡The opportunity to work on real-world challenges alongside talented individuals was both inspiring and rewarding. A huge thank you to the Dev Chauhan Fetch.ai Developers: Meerut team for organizing this event and providing us with the platform to innovate and ideate on future technologies. 🚀Excited to carry forward the learnings from this experience into future projects!.",
-    image: "/dummy.png",
-    url: "https://www.linkedin.com/posts/parth-kamal-025422293_fetchai-ideathon-innovation-activity-7252254373915840513-3TI9",
-  },
+
   // Add more posts as needed
 ];
 

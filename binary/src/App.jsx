@@ -11,6 +11,7 @@ import ProfileEdit from './components/ProfileEdit'
 import LandingPage from './components/LandingPage'
 import Navbar from './Navbar';
 import Footer from './Footer';
+import EventCalendar from './components/Calender';
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(null);
 
@@ -23,7 +24,10 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login setLoggedInUser={setLoggedInUser} />} />
         <Route path="/home" element={<Home loggedInUser={loggedInUser} />} />
-        <Route path ="/event" element={<EventManager/>} />
+        <Route path ="/event" element={<>
+          <EventCalendar/>
+          <EventManager/>
+        </>} />
         <Route path="/teacher/home" element={<LandingTeacher/>} />
         <Route path="/community" element={<MainCommunity/>} />
         <Route path="/edit" element={<ProfileEdit loggedInUser={loggedInUser}/>} />

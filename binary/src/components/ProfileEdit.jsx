@@ -1,5 +1,5 @@
 // ProfileEdit.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './ProfileEdit.css'; // Ensure this file is linked correctly
 
 const ProfileEdit = ({ loggedInUser }) => {
